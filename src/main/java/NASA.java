@@ -2,7 +2,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NASA {
 
-    private String copright;
+    private String copyright;
     private String date;
     private String explanation;
     private String hdurl;
@@ -11,7 +11,7 @@ public class NASA {
     private String title;
     private String url;
 
-    public NASA(@JsonProperty("copright") String copright,
+    public NASA(@JsonProperty("copyright") String copyright,
                 @JsonProperty("date") String date,
                 @JsonProperty("explanation") String explanation,
                 @JsonProperty("hdurl") String hdurl,
@@ -19,7 +19,7 @@ public class NASA {
                 @JsonProperty("service_version") String service_version,
                 @JsonProperty("title") String title,
                 @JsonProperty("url") String url) {
-        this.copright = copright;
+        this.copyright = copyright;
         this.date = date;
         this.explanation = explanation;
         this.hdurl = hdurl;
@@ -29,8 +29,8 @@ public class NASA {
         this.url = url;
     }
 
-    public String getCopright() {
-        return copright;
+    public String getCopyright() {
+        return copyright;
     }
 
     public String getDate() {
@@ -64,7 +64,7 @@ public class NASA {
     @Override
     public String toString() {
         return "NASA to day" +
-                "\ncopright = " + copright +
+                "\ncopright = " + copyright +
                 "\ndate = " + date +
                 "\nexplantion='" + explanation +
                 "\nhdurl='" + hdurl +
