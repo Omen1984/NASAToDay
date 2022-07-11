@@ -1,6 +1,8 @@
+package org.ivanplehanov.nasa.api.entity;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class NASA {
+public class InformationObject {
 
     private String copyright;
     private String date;
@@ -11,14 +13,14 @@ public class NASA {
     private String title;
     private String url;
 
-    public NASA(@JsonProperty("copyright") String copyright,
-                @JsonProperty("date") String date,
-                @JsonProperty("explanation") String explanation,
-                @JsonProperty("hdurl") String hdurl,
-                @JsonProperty("media_type") String media_type,
-                @JsonProperty("service_version") String service_version,
-                @JsonProperty("title") String title,
-                @JsonProperty("url") String url) {
+    public InformationObject(@JsonProperty("copyright") String copyright,
+                             @JsonProperty("date") String date,
+                             @JsonProperty("explanation") String explanation,
+                             @JsonProperty("hdurl") String hdurl,
+                             @JsonProperty("media_type") String media_type,
+                             @JsonProperty("service_version") String service_version,
+                             @JsonProperty("title") String title,
+                             @JsonProperty("url") String url) {
         this.copyright = copyright;
         this.date = date;
         this.explanation = explanation;
@@ -26,6 +28,41 @@ public class NASA {
         this.media_type = media_type;
         this.service_version = service_version;
         this.title = title;
+        this.url = url;
+    }
+
+    public InformationObject() {
+    }
+
+    public void setCopyright(String copyright) {
+        this.copyright = copyright;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
+    }
+
+    public void setHdurl(String hdurl) {
+        this.hdurl = hdurl;
+    }
+
+    public void setMedia_type(String media_type) {
+        this.media_type = media_type;
+    }
+
+    public void setService_version(String service_version) {
+        this.service_version = service_version;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setUrl(String url) {
         this.url = url;
     }
 
@@ -63,7 +100,7 @@ public class NASA {
 
     @Override
     public String toString() {
-        return "NASA to day" +
+        return "entity.NASA to day" +
                 "\ncopright = " + copyright +
                 "\ndate = " + date +
                 "\nexplantion='" + explanation +
