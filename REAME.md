@@ -26,7 +26,7 @@ public class Communication {
 
 }
 ```
-####Main классом выступает App.java который и запустит скачивание в */src/main/resources/NASAFiles/
+###Main классом выступает App.java который и запустит скачивание в */src/main/resources/NASAFiles/
 ```java
 public static void main(String[] args) {
 
@@ -46,7 +46,7 @@ public static void main(String[] args) {
 * spring-webmvc
 * jackson-databind
 
-#####Описание Communication.java
+####Описание Communication.java
 C помощью анатации @Autowired устанавливаем
 зависимость между Bean'ом Communication и 
 RestTemplate - вспомогательным классом для составления Http запросов.
@@ -66,7 +66,7 @@ RestTemplate - вспомогательным классом для состав
         return nasaToDay;
     }
 ```
-#####Описание DownloaderImpl.java
+####Описание DownloaderImpl.java
 Было принято решение отделить функционал загрузки в отдельный и класс интерфейс, на 
 случай изменения хранения файлов в NASA API и предоставить реализацию интерфейса
 которая с помощью класса из стандартной библиотеки Java
@@ -91,7 +91,7 @@ public class DownloaderImpl implements Downloader{
 
 }
 ```
-#####Описание InformationObject.java
+####Описание InformationObject.java
 Обычный POJO описывающий JSON. Аннотация @com.fasterxml.jackson.annotation.JsonProperty в 
 конструкторе используется для автоматического связывания полей объекта с полями JSON документа.
 
